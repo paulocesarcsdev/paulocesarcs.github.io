@@ -1,0 +1,40 @@
+:root {
+    --python-blue: #3776AB;
+    --python-yellow: #FFD43B;
+}
+
+.navbar {
+    border-bottom: 3px solid var(--python-yellow);
+}
+
+.card {
+    transition: transform 0.3s;
+    border: 2px solid var(--python-blue);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn {
+    background-color: var(--python-blue);
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #2b5a8a;
+}
+
+
+.btn-idioma {
+    background-color: #3776AB !important;
+    color: white !important;
+    border: 1px solid #FFD43B;
+    font-size: 0.9rem;
+  }
+  
+  .btn-idioma.ativo {
+    background-color: #FFD43B !important;
+    color: #3776AB !important;
+  }

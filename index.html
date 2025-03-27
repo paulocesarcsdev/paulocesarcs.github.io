@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Ciência de Dados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --python-blue: #3776AB;
+            --python-yellow: #FFD43B;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui;
+        }
+        
+        .navbar {
+            background: var(--python-blue);
+            border-bottom: 3px solid var(--python-yellow);
+        }
+        
+        .hero {
+            background: linear-gradient(45deg, #3776AB 0%, #2b5a8a 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .project-card {
+            transition: transform 0.3s;
+            border: 2px solid var(--python-blue);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .badge-tech {
+            background: var(--python-yellow);
+            color: var(--python-blue);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" alt="Logo" width="40">
+                Data Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experiência</a></li>
+                    <li class="nav-item"><a class="nav-link" href="articles.html">Artigos</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="en/index.html">🇬🇧 EN</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <img src="assets/img/profile.jpg" class="rounded-circle mb-4" width="150">
+            <h1 class="display-4 mb-3">Paulo César Costa da Silva</h1>
+            <p class="lead">Cientista de Dados | Especialista em Machine Learning</p>
+            <div class="mt-4">
+                <a href="https://github.com/seuusuario" class="btn btn-lg" style="background: var(--python-yellow);">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-5" id="projects">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--python-blue);">Projetos Recentes</h2>
+            
+            <div class="row g-4">
+                <!-- Projeto 1 -->
+                <div class="col-md-6">
+                    <div class="project-card card h-100">
+                        <img src="assets/img/project1.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Previsão de Churn</h3>
+                            <div class="mb-3">
+                                <span class="badge badge-tech me-2">Python</span>
+                                <span class="badge badge-tech me-2">Scikit-learn</span>
+                                <span class="badge badge-tech">XGBoost</span>
+                            </div>
+                            <p class="card-text">Modelo de machine learning para previsão de rotatividade de clientes com 89% de precisão.</p>
+                            <a href="#" class="btn" style="background: var(--python-blue); color: white;">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="col-md-6">
+                    <div class="project-card card h-100">
+                        <img src="assets/img/project2.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Análise de Sentimentos</h3>
+                            <div class="mb-3">
+                                <span class="badge badge-tech me-2">NLP</span>
+                                <span class="badge badge-tech me-2">TensorFlow</span>
+                                <span class="badge badge-tech">BERT</span>
+                            </div>
+                            <p class="card-text">Sistema de classificação de sentimentos em avaliações de produtos com 92% de acurácia.</p>
+                            <a href="#" class="btn" style="background: var(--python-blue); color: white;">
+                                <i class="fab fa-medium"></i> Artigo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <footer class="py-4" style="background: var(--python-blue); color: white;">
+        <div class="container text-center">
+            <h3 class="mb-4">Contato</h3>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="https://linkedin.com/in/seuprofile" class="text-white">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="mailto:contato@portfolio.com" class="text-white">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                <a href="https://medium.com/@seuusuario" class="text-white">
+                    <i class="fab fa-medium fa-2x"></i>
+                </a>
+            </div>
+            <p class="mt-4 mb-0">&copy; 2024 Maria Silva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
