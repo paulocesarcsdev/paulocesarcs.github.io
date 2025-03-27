@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiência Profissional - Ford</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --ford-blue: #00274C;
+            --ford-orange: #FF6633;
+        }
+        
+        .ford-header {
+            background: var(--ford-blue);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .timeline {
+            border-left: 3px solid var(--ford-orange);
+            padding-left: 2rem;
+            margin-left: 1rem;
+        }
+        
+        .tech-tag {
+            background: var(--ford-orange);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .project-card {
+            border: 2px solid var(--ford-blue);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Seção de Cabeçalho -->
+<header class="ford-header text-center">
+    <div class="container">
+        <h1 class="display-4">Machine Learning Engineer</h1>
+        <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+            <img src="ford-logo.png" alt="Ford Logo" width="80">
+            <div>
+                <h2>Ford Motor Company</h2>
+                <p class="mb-0">Jul 2021 - Presente</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Conteúdo Principal -->
+<main class="container my-5">
+    <section class="mb-5">
+        <h3 class="mb-4" style="color: var(--ford-blue);">Principais Responsabilidades</h3>
+        <div class="timeline">
+            <div class="mb-4 position-relative">
+                <h5>Desenvolvimento de Modelos Preditivos</h5>
+                <ul>
+                    <li>Liderança na criação de modelos para prever falhas em componentes de veículos</li>
+                    <li>Otimização de algoritmos de manutenção preditiva usando dados de sensores IoT</li>
+                    <div class="mt-2">
+                        <span class="tech-tag me-2">Python</span>
+                        <span class="tech-tag me-2">PySpark</span>
+                        <span class="tech-tag">TensorFlow</span>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <h5>Arquitetura de Big Data</h5>
+                <ul>
+                    <li>Implementação de pipelines ETL processando 5TB/dia de dados de telemetria</li>
+                    <li>Integração entre Hadoop clusters e Google Cloud Platform (GCP)</li>
+                    <div class="mt-2">
+                        <span class="tech-tag me-2">Hadoop</span>
+                        <span class="tech-tag me-2">Google Cloud</span>
+                        <span class="tech-tag">Apache Beam</span>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3 class="mb-4" style="color: var(--ford-blue);">Projetos Destacados</h3>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="project-card card h-100">
+                    <div class="card-body">
+                        <h5>Sistema de Recomendação de Peças</h5>
+                        <ul>
+                            <li>Redução de 15% no tempo de manutenção</li>
+                            <li>Integração com banco de dados Oracle</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tech-tag me-2">MLOps</span>
+                            <span class="tech-tag me-2">SQL</span>
+                            <span class="tech-tag">Airflow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="project-card card h-100">
+                    <div class="card-body">
+                        <h5>Otimização de Cadeia de Suprimentos</h5>
+                        <ul>
+                            <li>Modelo de previsão de demanda com 92% de acurácia</li>
+                            <li>Processamento de dados de 15 fontes diferentes</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tech-tag me-2">BigQuery</span>
+                            <span class="tech-tag me-2">Pandas</span>
+                            <span class="tech-tag">Looker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
