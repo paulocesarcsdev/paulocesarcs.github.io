@@ -1,0 +1,142 @@
+<!-- artigo1.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regressão Linear Completa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --python-blue: #3776AB;
+            --python-yellow: #FFD43B;
+        }
+        
+        .math-formula {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+        }
+        
+        .code-block {
+            background: #2b2b2b;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="container py-5">
+
+    <article>
+        <h1 class="mb-4">Regressão Linear: Teoria e Aplicação Prática</h1>
+        
+        <section class="mb-5">
+            <h2>Introdução</h2>
+            <p>A regressão linear é uma das técnicas mais fundamentais em estatística e machine learning. Seu objetivo é modelar a relação entre uma variável dependente (y) e uma ou mais variáveis independentes (X).</p>
+            
+            <div class="math-formula mb-4">
+                <h3>Fórmula Geral</h3>
+                y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ + ε
+                <br>
+                Onde:
+                <ul>
+                    <li>β₀: Intercepto</li>
+                    <li>β₁...βₙ: Coeficientes</li>
+                    <li>ε: Erro aleatório</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Conceitos Chave</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3>Mínimos Quadrados</h3>
+                            <p>Método para encontrar os coeficientes que minimizam a soma dos quadrados dos resíduos:</p>
+                            <div class="math-formula">
+                                min Σ(yᵢ - ŷᵢ)²
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3>Coeficiente de Determinação (R²)</h3>
+                            <p>Mede a proporção da variância na variável dependente que é previsível a partir das variáveis independentes:</p>
+                            <div class="math-formula">
+                                R² = 1 - (SS_res / SS_tot)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Implementação em Python</h2>
+            <div class="code-block">
+                <pre><code>
+# Exemplo com Scikit-learn
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+
+# Criar modelo
+model = LinearRegression()
+
+# Treinar modelo
+model.fit(X_train, y_train)
+
+# Previsões
+predictions = model.predict(X_test)
+
+# Avaliação
+print(f'R² Score: {r2_score(y_test, predictions):.2f}')
+                </code></pre>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Interpretação dos Resultados</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Coeficientes</h5>
+                            <p>Indicam o peso e direção da relação entre cada variável independente e a variável dependente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>P-valores</h5>
+                            <p>Determinam a significância estatística de cada variável</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Intervalos de Confiança</h5>
+                            <p>Fornecem uma estimativa da precisão dos coeficientes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a href="artigos.html" class="btn" style="background: var(--python-blue); color: white;">Voltar para Artigos</a>
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
